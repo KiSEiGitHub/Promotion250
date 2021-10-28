@@ -1,6 +1,6 @@
 <html lang="fr">
 <head>
-    <title>Moyenne</title>
+    <title>temps</title>
     <meta charset="utf-8">
 </head>
 <body>
