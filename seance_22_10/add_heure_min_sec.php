@@ -33,7 +33,7 @@
                 $total_minute = round(($M1 + $M2 + ($S1 + $S2) / 60) % 60, 2);
                 $total_heure = round(($H1 + $H2 + ($M1 + $M2 + ($S1 + $S2) / 60) / 60) % 60, 2);
 
-                echo "<p>$total_heure:$total_minute:$total_seconde</p>";
+                echo "<p style='color: red'>$total_heure:$total_minute:$total_seconde</p>";
             } else {
                 echo "<p>Il manque un truc</p>";
             }
