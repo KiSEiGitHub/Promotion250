@@ -27,7 +27,7 @@
                 $Aire = $A1 + $A2;
                 echo "<p>Aire : $Aire</p>";
             } else {
-                echo "<p>Il manque un truc</p>";
+                echo "<p>Renseigner tous les champs</p>";
             }
         }
         ?>
