@@ -26,10 +26,12 @@ function selectAllclient()
     $con = connexion();
     if ($con) {
         $lesClients = mysqli_query($con, $r);
+        var_dump($lesClients);
     } else {
         return null;
     }
-
+    deconnexion($con);
+    return $lesClients;
 }
 
 
