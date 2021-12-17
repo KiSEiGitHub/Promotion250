@@ -1,5 +1,5 @@
 <h3> Liste des clients </h3>
-<table border="1">
+<table>
     <tr>
         <td>id client</td>
         <td>Nom client</td>
@@ -9,6 +9,7 @@
         <td>Téléphone</td>
     </tr>
     <?php
+    $lesClients = null;
     foreach ($lesClients as $unClient) {
         echo "<tr>";
             echo "<td>".$unClient['idclient']."</td>";
