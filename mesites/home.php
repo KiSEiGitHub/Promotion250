@@ -6,4 +6,3 @@
     Notre garage est le top des dgarages dans la région. Venez nous voir, nous serons ravis de vous accueillir et vous
     rendre service
 </p>
-
