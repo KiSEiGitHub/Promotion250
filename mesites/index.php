@@ -1,3 +1,7 @@
+<?php
+    require_once 'fonction/fonction.php';
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
