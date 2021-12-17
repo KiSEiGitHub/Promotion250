@@ -9,7 +9,6 @@
         <td>Téléphone</td>
     </tr>
     <?php
-    $lesClients = null;
     foreach ($lesClients as $unClient) {
         echo "<tr>";
             echo "<td>".$unClient['idclient']."</td>";
