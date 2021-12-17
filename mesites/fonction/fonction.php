@@ -22,6 +22,13 @@ function deconnexion($con)
 
 function selectAllclient()
 {
+    $r = "SELECT * FROM client;";
+    $con = connexion();
+    if ($con) {
+        $lesClients = mysqli_query($con, $r);
+    } else {
+        return null;
+    }
 
 }
 
