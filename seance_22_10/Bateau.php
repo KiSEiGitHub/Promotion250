@@ -21,7 +21,7 @@
                 $VT = $_POST['VT'];
 
                 $D = sqrt(pow($LG, 2) - pow($HT, 2));
-                $T = ($D / $VT) * 3600;
+                $T = ($D / $VT) * 3600;0
                 $H = round($T /3600);
                 $M = round(($T %3600) / 60);
                 $S = round(($T % 3600) % 60);
