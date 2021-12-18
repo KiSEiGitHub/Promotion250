@@ -25,11 +25,7 @@ p, h3, h1, td, h4 {
 }
 
 .input-block {
-    margin-bottom: 15px;
-}
-
-input#co {
-    position: relative;
+    margin-bottom: 17px;
 }
 
 input {
