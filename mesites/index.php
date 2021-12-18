@@ -11,28 +11,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Site </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <div class="container">
     <h1>Bienvuenue sur le site Garage JGCM</h1>
     <a href="index.php?page=0">
-        <img src="images/home.png" alt="" height="60" width="60">
+        <i class="fas fa-home fa-3x"></i>
     </a>
 
     <a href="index.php?page=1">
-        <img src="images/client.png" alt="" height="60" width="60">
+        <i class="fas fa-users-cog fa-3x"></i>
     </a>
 
     <a href="index.php?page=2">
-        <img src="images/intervention.png" alt="" height="60" width="60">
+        <i class="fas fa-sliders-v fa-3x"></i>
     </a>
 
     <a href="index.php?page=3">
-        <img src="images/technicien.png" alt="" height="60" width="60">
+        <i class="fas fa-user fa-3x"></i>
     </a>
 
     <a href="index.php?page=4">
-        <img src="images/vehicule.png" alt="" height="60" width="60">
+        <i class="fas fa-car fa-3x"></i>
     </a>
 
     <?php
