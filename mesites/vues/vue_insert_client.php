@@ -1,18 +1,35 @@
 <h4>Insertion client</h4>
 <form action="" method="post">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="text" name="prenom" placeholder="Prénom" class="field">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="text" name="nom" placeholder="nom" class="field">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="text" name="adresse" placeholder="adresse" class="field">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="email" name="email" placeholder="email" class="field">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="password" name="mdp" placeholder="mot de passe" class="field">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="text" name="tel" placeholder="téléphone" class="field">
-    <!--suppress HtmlFormInputWithoutLabel -->
-    <input type="submit" value="Envoyer" name="btn">
-    <input type="reset" value="reset" name="annuler">
+    <div class="input-block">
+        <label for="prénom">
+            <input type="text" name="prenom" placeholder="Prénom" id="co">
+        </label>
+        <label for="nom">
+            <input type="text" name="nom" placeholder="Nom">
+        </label>
+    </div>
+    <div class="input-block">
+        <label for="Adresse">
+            <input type="text" name="adresse" placeholder="Adresse">
+        </label>
+        <label for="mail">
+            <input type="email" name="mail" placeholder="Email">
+        </label>
+    </div>
+    <div class="input-block">
+        <label for="mot de passe">
+            <input type="password" name="mdp" placeholder="mot de passe">
+        </label>
+        <label for="tel">
+            <input type="text" name="tel" placeholder="Téléphone">
+        </label>
+    </div>
+    <div class="input-block">
+        <label for="mot de passe">
+            <input type="submit">
+        </label>
+        <label for="tel">
+            <input type="reset">
+        </label>
+    </div>
 </form>
