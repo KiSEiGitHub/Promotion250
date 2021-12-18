@@ -1,9 +1,9 @@
 <h3> Liste des clients </h3>
 <table>
     <tr>
-        <td>id client</td>
-        <td>Nom client</td>
-        <td>Prénom client</td>
+        <td>ID</td>
+        <td>Nom</td>
+        <td>Prénom</td>
         <td>Adresse</td>
         <td>Email</td>
         <td>Téléphone</td>
