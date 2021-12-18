@@ -24,14 +24,30 @@ p, h3, h1, td, h4 {
     font-family: 'Poppins', sans-serif;
 }
 
+.input-block {
+    margin-bottom: 15px;
+}
+
+input#co {
+    position: relative;
+}
+
 input {
-    margin: 5px auto;
-    display: block;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #000;
+    width: 200px;
 }
 
 input::placeholder {
     position: relative;
-    left: 20px;
+    left: 14px;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 0 15px;
+    text-align: left;
 }
 
 .field {
@@ -46,6 +62,7 @@ table {
     margin: 0 auto;
     border: solid 2px #000;
 }
+
 td {
     padding: 10px 20px;
 }
