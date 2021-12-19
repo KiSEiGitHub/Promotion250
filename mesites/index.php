@@ -25,11 +25,11 @@
     </a>
 
     <a href="index.php?page=2">
-        <i class="fas fa-sliders-v fa-3x"></i>
+        <i class="fas fa-arrow-circle-up fa-3x"></i>
     </a>
 
     <a href="index.php?page=3">
-        <i class="fas fa-user fa-3x"></i>
+        <i class="fab fa-accessible-icon fa-3x"></i>
     </a>
 
     <a href="index.php?page=4">
