@@ -8,10 +8,21 @@
 a {
     text-decoration: none;
     margin: 0 5px;
+    transition: font-size 0.2s ease-in-out;
+}
+
+a:hover {
+    transition: font-size 0.2s ease-in-out;
 }
 
 .fas {
     width: 64px;
+    transition: color 0.2s ease-in-out;
+}
+
+.fas:hover, .fab:hover {
+    color: red;
+    transition: color 0.2s ease-in-out;
 }
 
 .container {
