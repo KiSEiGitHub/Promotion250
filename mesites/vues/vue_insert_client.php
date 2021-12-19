@@ -2,7 +2,7 @@
 <form action="" method="post">
     <div class="input-block">
         <label for="prénom">
-            <input type="text" name="prenom" placeholder="Prénom" id="co">
+            <input type="text" name="prenom" placeholder="Prénom">
         </label>
         <label for="nom">
             <input type="text" name="nom" placeholder="Nom">
@@ -25,11 +25,12 @@
         </label>
     </div>
     <div class="input-block">
-        <label for="mot de passe">
-            <input type="submit">
+        <label for="submut">
+            <input type="submit" name="btn">
         </label>
-        <label for="tel">
+        <label for="reset">
             <input type="reset">
         </label>
     </div>
+    <?php insertClient(); ?>
 </form>
