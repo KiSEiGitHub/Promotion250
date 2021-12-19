@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+body {
+    background-color: antiquewhite;
+    color: #000000;
+}
+
 a {
     text-decoration: none;
     margin: 0 5px;
@@ -21,7 +26,7 @@ a:hover {
 }
 
 .fas:hover, .fab:hover {
-    color: red;
+    color: #1F79B8;
     transition: color 0.2s ease-in-out;
 }
 
@@ -35,7 +40,7 @@ i {
 }
 
 
-p, h3, h1, td, h4 {
+p, h3, h1, td, h4, .btn-sbt {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -56,10 +61,28 @@ input::placeholder {
     left: 14px;
 }
 
-input[type="submit"], input[type="reset"] {
+.btn-sbt {
     padding: 0 15px;
-    text-align: left;
+    background: #1F79B8;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 6px #134a70;
+    outline: none;
+    position: relative;
+    border: none;
+}
+
+.btn-sbt:hover {
     cursor: pointer;
+    box-shadow: 0 4px #134a70;
+    top: 2px;
+}
+
+.btn-sbt:active {
+    box-shadow: 0 0 #134a70;
+    top: 6px;
 }
 
 .field {
