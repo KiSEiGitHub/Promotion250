@@ -10,6 +10,10 @@ a {
     margin: 0 5px;
 }
 
+.fas {
+    width: 64px;
+}
+
 .container {
     display: block;
     text-align: center;
