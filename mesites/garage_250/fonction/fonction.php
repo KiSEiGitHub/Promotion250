@@ -174,3 +174,53 @@ function insertVehicule()
         }
     }
 }
+
+function insertIntervention()
+{
+    $con = mysqli_connect(
+        "localhost",
+        "root",
+        "",
+        "garage_250"
+    );
+
+    if (isset($_POST['btn'])) {
+        if (!empty($_POST['description']) && !empty($_POST['dateinter']) && !empty($_POST['prix']) && !empty($_POST['idvehicule']) &&
+            !empty($_POST['idtechnicien'])) {
+
+            // variable
+            $Description = $_POST['description'];
+            $DataInter = $_POST['dateinter'];
+            $Prix = $_POST['prix'];
+            $IDVe = $_POST['idvehicule'];
+            $idTech = $_POST['idtechnicien'];
+
+            // requête sql pour insert
+            $sql = "INSERT INTO intervention(description, dateinter, prix, idvehicule, idtechnicien) VALUES ('$Description', '$DataInter', '$Prix', '$IDVe', '$idTech')";
+
+            if (mysqli_query($con, $sql)) {
+                echo "<p class='sucess'>Nouveau intervention</p>";
+            } else {
+                echo "<p class='error'>Une erreur est survenue</p>";
+            }
+
+            mysqli_close($con);
+        } else {
+            echo "<p class='error'>Veuillez remplir tous les champs</p>";
+        }
+    }
+}
+
+function allIntervetion()
+{
+    $r = "SELECT * FROM intervention";
+    $con = connexion();
+    if ($con) {
+        $lesTechnicien = mysqli_query($con, $r);
+
+    } else {
+        return null;
+    }
+    deconnexion($con);
+    return $lesTechnicien;
+}

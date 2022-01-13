@@ -1,4 +1,4 @@
-<h3> Liste des clients </h3>
+<h3> Liste des techniciens </h3>
 <table>
     <tr>
         <td>ID</td>
