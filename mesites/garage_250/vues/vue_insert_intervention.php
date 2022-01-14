@@ -2,7 +2,7 @@
 <form action = "" method = "post">
     <div class = "input-block">
         <label for = "description">
-            <input type = "text" name = "description" placeholder = "description" autocomplete = "off">
+            <textarea name="description" rows="3" cols="30"></textarea>
         </label>
         <label for = "dateinter">
             <input type = "text" name = "dateinter" placeholder = "dateinter" autocomplete = "off">

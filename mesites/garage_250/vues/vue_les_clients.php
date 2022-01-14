@@ -7,6 +7,7 @@
         <td>Adresse</td>
         <td>Email</td>
         <td>Téléphone</td>
+        <td>Opération</td>
     </tr>
     <?php
     $lesClients = selectAllclient();
@@ -18,6 +19,15 @@
         echo "<td>" . $unClient['adresse'] . "</td>";
         echo "<td>" . $unClient['email'] . "</td>";
         echo "<td>" . $unClient['tel'] . "</td>";
+        echo "<td>";
+        echo "<a href='index.php?page=1&action=sup&idclient=" . $unClient['idclient'] . "'>";
+        echo "<button class='error'>Supprimer</button>";
+        echo "</a>";
+        echo "<a href='index.php?page=1&action=edit&idclient=" . $unClient['idclient'] . "'>";
+        echo "<button class='sucess'>Edit</button>";
+        echo "</a>";
+        echo "</td>";
+
         echo "</tr>";
     }
     ?>
