@@ -32,5 +32,4 @@
             <input type = "reset" class = "btn-sbt">
         </label>
     </div>
-    <?php insertTechnicien(); ?>
 </form>

@@ -38,5 +38,4 @@
             <input type = "reset" class = "btn-sbt">
         </label>
     </div>
-    <?php insertVehicule(); ?>
 </form>
