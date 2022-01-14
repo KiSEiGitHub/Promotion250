@@ -18,7 +18,16 @@
             <input type = "number" name = "nbkm" placeholder = "nbkm" autocomplete = "off">
         </label>
         <label for = "idclient">
-            <input type = "number" name = "idclient" placeholder = "idclient" autocomplete = "off">
+            <select name = "idclient">
+                <?php
+                    $lesClients = selectAllclient();
+                    foreach ($lesClients as $unClient){
+                        echo "<option value='".$unClient['idclient']."'>";
+                        echo $unClient['nom']." ".$unClient['prenom'];
+                        echo "</option>";
+                    }
+                ?>
+            </select>
         </label>
     </div>
     <div class = "input-block">

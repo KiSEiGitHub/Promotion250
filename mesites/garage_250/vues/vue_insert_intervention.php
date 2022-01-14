@@ -13,12 +13,30 @@
             <input type = "text" name = "prix" placeholder = "prix" autocomplete = "off">
         </label>
         <label for = "idvehicule">
-            <input type = "number" name = "idvehicule" placeholder = "idvehicule" autocomplete = "off">
+            <select name = "idvehicule">
+                <?php
+                $voitures = allVoiture();
+                foreach ($voitures as $voiture) {
+                    echo "<option value='" . $voiture['idvehicule'] . "'>";
+                    echo $voiture['matricule'] . " " . $voiture['marque'];
+                    echo "</option>";
+                }
+                ?>
+            </select>
         </label>
     </div>
     <div class = "input-block">
         <label for = "idtechnicien">
-            <input type = "number" name = "idtechnicien" placeholder = "idtechnicien" autocomplete = "off">
+            <select name = "idtechnicien">
+                <?php
+                $idtech = allTechnicien();
+                foreach ($idtech as $techtech) {
+                    echo "<option value='" . $techtech['idtechnicien'] . "'>";
+                    echo $techtech['prenom'] . " " . $techtech['nom'];
+                    echo "</option>";
+                }
+                ?>
+            </select>
         </label>
     </div>
     <div class = "input-block">
