@@ -14,6 +14,7 @@
         </label>
         <label for = "idvehicule">
             <select name = "idvehicule">
+                <option value=""> </option>
                 <?php
                 $voitures = allVoiture();
                 foreach ($voitures as $voiture) {
@@ -28,6 +29,7 @@
     <div class = "input-block">
         <label for = "idtechnicien">
             <select name = "idtechnicien">
+                <option value=""> </option>
                 <?php
                 $idtech = allTechnicien();
                 foreach ($idtech as $techtech) {
