@@ -20,6 +20,70 @@ function deconnexion($con)
 }
 
 
+function delClient($client)
+{
+    $con = mysqli_connect(
+        "localhost",
+        "root",
+        "",
+        "garage_250"
+    );
+
+    if ($con) {
+        $r = "delete from client where idclient = " . $client;
+        mysqli_query($con, $r);
+        mysqli_close($con);
+    }
+}
+
+function delIntervention($inter)
+{
+    $con = mysqli_connect(
+        "localhost",
+        "root",
+        "",
+        "garage_250"
+    );
+
+    if ($con) {
+        $r = "delete from intervention where idintervention = " . $inter;
+        mysqli_query($con, $r);
+        mysqli_close($con);
+    }
+}
+
+function delTech($tech)
+{
+    $con = mysqli_connect(
+        "localhost",
+        "root",
+        "",
+        "garage_250"
+    );
+
+    if ($con) {
+        $r = "delete from technicien where idtechnicien = " . $tech;
+        mysqli_query($con, $r);
+        mysqli_close($con);
+    }
+}
+
+function DelVoiture($voiture)
+{
+    $con = mysqli_connect(
+        "localhost",
+        "root",
+        "",
+        "garage_250"
+    );
+
+    if ($con) {
+        $r = "delete from vehicule where idvehicule = " . $voiture;
+        mysqli_query($con, $r);
+        mysqli_close($con);
+    }
+}
+
 function selectAllclient()
 {
     $r = "SELECT * FROM client;";

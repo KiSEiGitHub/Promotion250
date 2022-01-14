@@ -7,6 +7,7 @@
         <td>Date Circulation</td>
         <td>nbkm</td>
         <td>IdClient</td>
+        <td>Opération</td>
     </tr>
     <?php
     $lesVehicule = allVoiture();
@@ -18,6 +19,14 @@
         echo "<td>" . $voiture['datecirculation'] . "</td>";
         echo "<td>" . $voiture['nbkm'] . "</td>";
         echo "<td>" . $voiture['idclient'] . "</td>";
+        echo "<td>";
+        echo "<a href='index.php?page=4&action=sup&idvehicule=" . $voiture['idvehicule'] . "'>";
+        echo "<button class='btn-danger  btn' name='btnDelete'>Supprimer</button>";
+        echo "</a>";
+        echo "<a href='index.php?page=4&action=edit&idvehicule=" . $voiture['idvehicule'] . "'>";
+        echo "<button class='btn-primary btn'>Edit</button>";
+        echo "</a>";
+        echo "</td>";
         echo "</tr>";
     }
     ?>
