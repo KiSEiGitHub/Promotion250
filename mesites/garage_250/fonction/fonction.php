@@ -1,4 +1,7 @@
 <?php
+
+// optimiser fonction
+
 function connexion()
 {
     $con = mysqli_connect(
