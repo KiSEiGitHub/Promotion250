@@ -10,7 +10,6 @@
         <td>Opération</td>
     </tr>
     <?php
-    $lesTechnicien = allTechnicien();
     foreach ($lesTechnicien as $unTechnicien) {
         echo "<tr>";
         echo "<td>" . $unTechnicien['idtechnicien'] . "</td>";

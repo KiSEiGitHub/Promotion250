@@ -10,7 +10,7 @@
         <td>Opération</td>
     </tr>
     <?php
-    $lesIntervention = allIntervetion();
+
     foreach ($lesIntervention as $intervention) {
         echo "<tr>";
         echo "<td>" . $intervention['idintervention'] . "</td>";

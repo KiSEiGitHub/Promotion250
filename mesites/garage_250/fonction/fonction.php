@@ -42,6 +42,7 @@ function connexion()
     }
     return $con;
 }
+
 function deconnexion($con)
 {
     mysqli_close($con);
@@ -56,18 +57,17 @@ function Delete($table, $id, $id2)
         "garage_250"
     );
 
-    if($con){
-        $r = "delete from $table where $id2 = ".$id;
+    if ($con) {
+        $r = "delete from $table where $id2 = " . $id;
         mysqli_query($con, $r);
         mysqli_close($con);
     }
 
 }
 
-
-function selectAllclient()
+function Select($table)
 {
-    $r = "SELECT * FROM client;";
+    $r = "SELECT * FROM $table;";
     $con = connexion();
     if ($con) {
         $lesClients = mysqli_query($con, $r);
@@ -78,6 +78,22 @@ function selectAllclient()
     deconnexion($con);
     return $lesClients;
 }
+
+
+function selectAllclient()
+{
+    $r = "SELECT * FROM client;";
+    $con = connexion();
+    if ($con) {
+        $Data = mysqli_query($con, $r);
+
+    } else {
+        return null;
+    }
+    deconnexion($con);
+    return $Data;
+}
+
 function allTechnicien()
 {
     $r = "SELECT * FROM technicien;";
@@ -91,6 +107,7 @@ function allTechnicien()
     deconnexion($con);
     return $lesTechnicien;
 }
+
 function allVoiture()
 {
     $r = "SELECT * FROM vehicule";
@@ -104,6 +121,7 @@ function allVoiture()
     deconnexion($con);
     return $lesTechnicien;
 }
+
 function allIntervetion()
 {
     $r = "SELECT * FROM intervention";

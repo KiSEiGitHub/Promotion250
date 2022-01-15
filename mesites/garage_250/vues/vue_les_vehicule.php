@@ -10,7 +10,6 @@
         <td>Opération</td>
     </tr>
     <?php
-    $lesVehicule = allVoiture();
     foreach ($lesVehicule as $voiture) {
         echo "<tr>";
         echo "<td>" . $voiture['idvehicule'] . "</td>";

@@ -32,7 +32,7 @@ if (isset($_POST['btn'])) {
         echo "<p class='alert-danger'>Remplir les champs !</p>";
     }
 }
-
+$lesClients = Select('client');
 require_once 'vues/vue_les_clients.php';
 
 ?>

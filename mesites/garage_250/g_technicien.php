@@ -31,7 +31,7 @@ if(isset($_POST['btn'])){
         echo "<p class='alert-danger'>Remplir tous les champs</p>";
     }
 }
-
+$lesTechnicien = Select("technicien");
 require_once 'vues/vue_les_technicien.php';
 
 ?>
