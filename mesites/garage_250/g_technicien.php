@@ -4,7 +4,7 @@ require_once 'vues/vue_insert_technicien.php';
 
 if (isset($_GET['action']) && isset($_GET['idtechnicien'])) {
     if ($_GET['action'] == 'sup') {
-        delTech($_GET['idtechnicien']);
+        Delete("technicien", $_GET['idtechnicien'], "idtechnicien");
     }
 }
 

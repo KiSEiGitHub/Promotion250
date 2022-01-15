@@ -42,14 +42,12 @@ function connexion()
     }
     return $con;
 }
-
 function deconnexion($con)
 {
     mysqli_close($con);
 }
 
-
-function delClient($client)
+function Delete($table, $id, $id2)
 {
     $con = mysqli_connect(
         "localhost",
@@ -58,57 +56,14 @@ function delClient($client)
         "garage_250"
     );
 
-    if ($con) {
-        $r = "delete from client where idclient = " . $client;
+    if($con){
+        $r = "delete from $table where $id2 = ".$id;
         mysqli_query($con, $r);
         mysqli_close($con);
     }
-}
-function delIntervention($inter)
-{
-    $con = mysqli_connect(
-        "localhost",
-        "root",
-        "",
-        "garage_250"
-    );
 
-    if ($con) {
-        $r = "delete from intervention where idintervention = " . $inter;
-        mysqli_query($con, $r);
-        mysqli_close($con);
-    }
 }
-function delTech($tech)
-{
-    $con = mysqli_connect(
-        "localhost",
-        "root",
-        "",
-        "garage_250"
-    );
 
-    if ($con) {
-        $r = "delete from technicien where idtechnicien = " . $tech;
-        mysqli_query($con, $r);
-        mysqli_close($con);
-    }
-}
-function DelVoiture($voiture)
-{
-    $con = mysqli_connect(
-        "localhost",
-        "root",
-        "",
-        "garage_250"
-    );
-
-    if ($con) {
-        $r = "delete from vehicule where idvehicule = " . $voiture;
-        mysqli_query($con, $r);
-        mysqli_close($con);
-    }
-}
 
 function selectAllclient()
 {

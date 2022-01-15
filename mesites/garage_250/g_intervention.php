@@ -4,7 +4,7 @@ require_once 'vues/vue_insert_intervention.php';
 
 if (isset($_GET['action']) && isset($_GET['idintervention'])) {
     if ($_GET['action'] == 'sup') {
-        delIntervention($_GET['idintervention']);
+        Delete('intervention', 'idintervention', $_GET['idintervention']);
     }
 }
 

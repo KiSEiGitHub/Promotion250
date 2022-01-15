@@ -4,7 +4,7 @@ require_once 'vues/vue_insert_vehicule.php';
 
 if (isset($_GET['action']) && isset($_GET['idvehicule'])) {
     if ($_GET['action'] == 'sup') {
-        DelVoiture($_GET['idvehicule']);
+        Delete('vehicule', 'idvehicule', $_GET['idvehicule']);
     }
 }
 

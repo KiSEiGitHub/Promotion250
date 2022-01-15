@@ -5,7 +5,7 @@ require_once 'vues/vue_insert_client.php';
 
 if (isset($_GET['action']) && isset($_GET['idclient'])) {
     if ($_GET['action'] == 'sup') {
-        delClient($_GET['idclient']);
+        Delete('client', 'idclient', $_GET['idclient']);
     }
 }
 
