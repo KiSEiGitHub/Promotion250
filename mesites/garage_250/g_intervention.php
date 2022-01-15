@@ -33,4 +33,5 @@ if (isset($_POST['btn'])) {
 }
 $lesIntervention = Select('intervention');
 require_once 'vues/vue_les_intervention.php';
+
 ?>
