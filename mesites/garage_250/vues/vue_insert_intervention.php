@@ -16,7 +16,7 @@
             <select name = "idvehicule">
                 <option value=""> </option>
                 <?php
-                $voitures = allVoiture();
+                $voitures = Select('vehicule');
                 foreach ($voitures as $voiture) {
                     echo "<option value='" . $voiture['idvehicule'] . "'>";
                     echo $voiture['matricule'] . " " . $voiture['marque'];
@@ -31,7 +31,7 @@
             <select name = "idtechnicien">
                 <option value=""> </option>
                 <?php
-                $idtech = allTechnicien();
+                $idtech = Select('technicien');
                 foreach ($idtech as $techtech) {
                     echo "<option value='" . $techtech['idtechnicien'] . "'>";
                     echo $techtech['prenom'] . " " . $techtech['nom'];
