@@ -56,7 +56,7 @@ function Delete($table, $id, $id2)
 
 function Select($table)
 {
-    $r = "SELECT * FROM $table;";
+    $r = "SELECT * FROM $table";
     $con = connexion();
     if ($con) {
         $lesClients = mysqli_query($con, $r);
