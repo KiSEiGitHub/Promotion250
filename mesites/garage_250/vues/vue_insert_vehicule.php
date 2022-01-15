@@ -20,7 +20,7 @@
         <label for = "idclient">
             <select name = "idclient">
                 <?php
-                    $lesClients = selectAllclient();
+                    $lesClients = Select('client');
                     foreach ($lesClients as $unClient){
                         echo "<option value='".$unClient['idclient']."'>";
                         echo $unClient['nom']." ".$unClient['prenom'];
