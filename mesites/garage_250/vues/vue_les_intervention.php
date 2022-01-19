@@ -1,5 +1,5 @@
 <h3> Liste des interventions </h3>
-<table class="table table-striped table-dark">
+<table class = "table table-striped table-dark">
     <tr>
         <td>ID</td>
         <td>description</td>
@@ -20,8 +20,7 @@
         echo "<td>" . $intervention['idvehicule'] . "</td>";
         echo "<td>" . $intervention['idtechnicien'] . "</td>";
         echo "<td>";
-        echo "<td>";
-        echo "<a href='index.php?page=2&action=sup&idintervention=".$intervention['idintervention']."'>";
+        echo "<a href='index.php?page=2&action=sup&idintervention=" . $intervention['idintervention'] . "'>";
         echo "<button class='btn-danger btn'>Supprimer</button>";
         echo "</a>";
         echo "<a href='index.php?page=2&action=edit&idintervention='" . $intervention['idintervention'] . "'>";

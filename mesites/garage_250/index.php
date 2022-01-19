@@ -14,6 +14,7 @@ require_once 'fonction/fonction.php';
           integrity = "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin = "anonymous">
     <link rel = "stylesheet" href = "css/style.css">
+    <link rel = "stylesheet" href = "css/Form.css">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -66,7 +67,6 @@ require_once 'fonction/fonction.php';
 
     ?>
 </div>
-
 <footer>
     <div class="contact">
         <span class="h3">Contact </span>
