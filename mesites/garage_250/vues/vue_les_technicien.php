@@ -1,5 +1,5 @@
 <h3> Liste des techniciens </h3>
-<table>
+<table class="table table-striped table-dark">
     <tr>
         <td>ID</td>
         <td>Nom</td>
