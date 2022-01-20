@@ -67,3 +67,31 @@ function Select($table)
     deconnexion($con);
     return $lesClients;
 }
+
+function selectWhereClient($idclient)
+{
+    $r = "select * from client where idclient = " . $idclient;
+    $con = connexion();
+
+    if ($con) {
+        $LesClients = mysqli_query($con, $r);
+        $unClients = mysqli_fetch_assoc($LesClients);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $unClients;
+}
+
+function UpdateClient($tab)
+{
+    $r = "update client set nom = '" . $tab['nom'] . "', prenom = '" . $tab['prenom'] . "', adresse = '" . $tab['adresse'] . "', email = '" . $tab['mail'] . "', mdp = '" . $tab['mdp'] . "', tel = '" . $tab['mdp'] . "' where idclient = " . $tab['idclient'];
+
+    $con = connexion();
+    if ($con) {
+        mysqli_query($con, $r);
+    }
+
+    deconnexion($con);
+}

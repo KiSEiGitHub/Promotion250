@@ -68,9 +68,9 @@ require_once 'fonction/fonction.php';
     ?>
 </div>
 <footer>
-    <div class="contact">
-        <span class="h3">Contact </span>
-        <span class="h5">: 01.02.03.04.06</span>
+    <div class = "contact">
+        <span class = "h3">Contact </span>
+        <span class = "h5">: 01.02.03.04.06</span>
     </div>
 </footer>
 </body>
