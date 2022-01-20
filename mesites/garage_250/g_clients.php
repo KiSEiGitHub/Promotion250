@@ -1,5 +1,6 @@
 <h3 style = "font-size: 32px">Gestion client</h3>
 <?php
+$leClient = null;
 
 if (isset($_GET['action']) && isset($_GET['idclient'])) {
     if ($_GET['action'] == 'sup') {
