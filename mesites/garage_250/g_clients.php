@@ -1,8 +1,6 @@
 <h3 style = "font-size: 32px">Gestion client</h3>
 <?php
 
-require_once 'vues/vue_insert_client.php';
-
 if (isset($_GET['action']) && isset($_GET['idclient'])) {
     if ($_GET['action'] == 'sup') {
         Delete('client', 'idclient', $_GET['idclient']);
@@ -13,6 +11,7 @@ if (isset($_GET['action']) && isset($_GET['idclient'])) {
     }
 }
 
+require_once 'vues/vue_insert_client.php';
 
 if (isset($_POST['btn'])) {
     if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['adresse']) && !empty($_POST['mail']) &&
@@ -40,7 +39,13 @@ if (isset($_POST['btn'])) {
     UpdateClient($_POST);
     header('Location: index.php?page=1');
 }
-$lesClients = Select('client');
+
+if (isset($_POST['btn-search'])) {
+    $lesClients = searchClient($_POST['mot']);
+} else {
+    $lesClients = Select('client');
+}
+
 require_once 'vues/vue_les_clients.php';
 
 ?>

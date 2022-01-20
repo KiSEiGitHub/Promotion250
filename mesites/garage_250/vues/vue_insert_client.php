@@ -1,4 +1,4 @@
-<?php $leClient = selectWhereClient($_GET['idclient']); ?>
+<?php  $leClient = selectWhereClient($_GET['idclient']); ?>
 
 <h4>Insertion client</h4>
 <form action = "" method = "post">

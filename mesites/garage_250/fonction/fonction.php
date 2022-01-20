@@ -95,3 +95,18 @@ function UpdateClient($tab)
 
     deconnexion($con);
 }
+
+function searchClient($mot)
+{
+    $r = "select * from client where nom like '%" . $mot . "%' or prenom like '%" . $mot . "%';";
+    $con = connexion();
+
+    if ($con) {
+        $lesClients = mysqli_query($con, $r);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $lesClients;
+}
