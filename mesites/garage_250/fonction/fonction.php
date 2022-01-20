@@ -140,3 +140,18 @@ function UpdateTech($tab, $tech)
 
     deconnexion($con);
 }
+
+function searchTech($mot)
+{
+    $r = "select * from technicien where nom like '%" . $mot . "%' or prenom like '%" . $mot . "%';";
+    $con = connexion();
+
+    if ($con) {
+        $lesTech = mysqli_query($con, $r);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $lesTech;
+}

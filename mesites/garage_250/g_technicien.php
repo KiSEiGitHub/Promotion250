@@ -39,7 +39,13 @@ if (isset($_POST['btn'])) {
     header('Location: index.php?page=3');
 }
 
-$lesTechnicien = Select("technicien");
+if (isset($_POST['btn-search'])) {
+    $lesTechnicien = searchTech($_POST['mot']);
+} else {
+    $lesTechnicien = Select("technicien");
+}
+
+
 require_once 'vues/vue_les_technicien.php';
 
 ?>
