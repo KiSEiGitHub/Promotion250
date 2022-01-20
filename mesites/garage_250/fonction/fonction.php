@@ -127,11 +127,11 @@ function selectWhereTechnicien($idtech)
     return $unTechs;
 }
 
-function UpdateTech($tab)
+function UpdateTech($tab, $tech)
 {
     $r = "update technicien set nom = '" . $tab['nom'] . "', prenom = '" . $tab['prenom'] . "', qualification = '" .
         $tab['qualification'] .
-        "', email = '" . $tab['mail'] . "', mdp = '" . $tab['mdp'] . "', tel = '" . $tab['tel'] . "' where idtechnicien = " . $tab['idtechnicien'];
+        "', email = '" . $tab['mail'] . "', mdp = '" . $tab['mdp'] . "', tel = '" . $tab['tel'] . "' where idtechnicien = " . $tech;
 
     $con = connexion();
     if ($con) {

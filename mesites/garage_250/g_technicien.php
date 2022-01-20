@@ -35,7 +35,8 @@ if (isset($_POST['btn'])) {
         echo "<p class='alert-danger'>Remplir tous les champs</p>";
     }
 } else if (isset($_POST['Modifier'])) {
-    UpdateTech($_POST);
+    UpdateTech($_POST, $_GET['idtechnicien']);
+    header('Location: index.php?page=3');
 }
 
 $lesTechnicien = Select("technicien");
