@@ -86,7 +86,7 @@ function selectWhereClient($idclient)
 
 function UpdateClient($tab)
 {
-    $r = "update client set nom = '" . $tab['nom'] . "', prenom = '" . $tab['prenom'] . "', adresse = '" . $tab['adresse'] . "', email = '" . $tab['mail'] . "', mdp = '" . $tab['mdp'] . "', tel = '" . $tab['mdp'] . "' where idclient = " . $tab['idclient'];
+    $r = "update client set nom = '" . $tab['nom'] . "', prenom = '" . $tab['prenom'] . "', adresse = '" . $tab['adresse'] . "', email = '" . $tab['mail'] . "', mdp = '" . $tab['mdp'] . "', tel = '" . $tab['tel'] . "' where idclient = " . $tab['idclient'];
 
     $con = connexion();
     if ($con) {
@@ -109,4 +109,34 @@ function searchClient($mot)
 
     deconnexion($con);
     return $lesClients;
+}
+
+function selectWhereTechnicien($idtech)
+{
+    $r = "select * from technicien where idtechnicien = " . $idtech;
+    $con = connexion();
+
+    if ($con) {
+        $LesTech = mysqli_query($con, $r);
+        $unTechs = mysqli_fetch_assoc($LesTech);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $unTechs;
+}
+
+function UpdateTech($tab)
+{
+    $r = "update technicien set nom = '" . $tab['nom'] . "', prenom = '" . $tab['prenom'] . "', qualification = '" .
+        $tab['qualification'] .
+        "', email = '" . $tab['mail'] . "', mdp = '" . $tab['mdp'] . "', tel = '" . $tab['tel'] . "' where idtechnicien = " . $tab['idtechnicien'];
+
+    $con = connexion();
+    if ($con) {
+        mysqli_query($con, $r);
+    }
+
+    deconnexion($con);
 }

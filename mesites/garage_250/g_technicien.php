@@ -1,16 +1,20 @@
 <h3 style = "font-size: 32px">Gestion technicien</h3>
 <?php
-require_once 'vues/vue_insert_technicien.php';
+$leTechnicien = null;
 
 if (isset($_GET['action']) && isset($_GET['idtechnicien'])) {
     if ($_GET['action'] == 'sup') {
         Delete("technicien", $_GET['idtechnicien'], "idtechnicien");
+    } else if ($_GET['action'] == 'edit') {
+        $leTechnicien = selectWhereTechnicien($_GET['idtechnicien']);
     }
 }
 
-if(isset($_POST['btn'])){
+require_once 'vues/vue_insert_technicien.php';
+
+if (isset($_POST['btn'])) {
     if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['qualification']) && !empty($_POST['mail']) &&
-            !empty($_POST['mdp']) && !empty($_POST['tel'])){
+        !empty($_POST['mdp']) && !empty($_POST['tel'])) {
         Insert(
             "technicien",
             "nom",
@@ -30,7 +34,10 @@ if(isset($_POST['btn'])){
     } else {
         echo "<p class='alert-danger'>Remplir tous les champs</p>";
     }
+} else if (isset($_POST['Modifier'])) {
+    UpdateTech($_POST);
 }
+
 $lesTechnicien = Select("technicien");
 require_once 'vues/vue_les_technicien.php';
 
