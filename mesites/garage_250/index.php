@@ -20,6 +20,9 @@ require_once 'fonction/fonction.php';
 <body>
 <div class = "container">
     <h1>Bienvuenue sur le site Garage JGCM</h1>
+    <?php
+        require_once ('vues/vue_connexion.php');
+    ?>
     <a href = "index.php?page=0">
         <i class = "fas fa-home fa-3x"></i>
     </a>

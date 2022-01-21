@@ -10,7 +10,7 @@
     </div>
     <div class = "input-block">
         <label for = "DataCirculation">
-            <input type = "text" name = "datecirculation" placeholder = "DataCirculation" autocomplete = "off">
+            <input type = "date" name = "datecirculation" placeholder = "DataCirculation" autocomplete = "off">
         </label>
     </div>
     <div class = "input-block">

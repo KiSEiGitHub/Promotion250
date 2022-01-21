@@ -188,14 +188,29 @@ function CountAll($table)
 
 function selectVehiculelesClients($idclient)
 {
-    $r = "select * from vehicule where idclient = ".$idclient;
+    $r = "select * from vehicule where idclient = " . $idclient;
     $con = connexion();
 
-    if($con){
+    if ($con) {
         $res = mysqli_query($con, $r);
     } else {
         return null;
     }
     deconnexion($con);
     return $res;
+}
+
+function AdminConnect($pseudo, $mdp)
+{
+    $con = connexion();
+    $r = "select mdp from user where iduser = 1";
+    if ($con) {
+        $res = mysqli_query($con, $r);
+        $resultat = mysqli_fetch_assoc($res);
+        var_dump($resultat);
+        if ($mdp == $resultat) {
+            var_dump("OUI");
+        }
+    }
+
 }
