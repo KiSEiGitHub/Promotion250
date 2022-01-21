@@ -155,3 +155,33 @@ function searchTech($mot)
     deconnexion($con);
     return $lesTech;
 }
+
+function selectWhereIntervention($idtech)
+{
+    $r = "select * from intervention where idintervention = " . $idtech;
+    $con = connexion();
+
+    if ($con) {
+        $LesTech = mysqli_query($con, $r);
+        $unTechs = mysqli_fetch_assoc($LesTech);
+    } else {
+        return null;
+    }
+
+    deconnexion($con);
+    return $unTechs;
+}
+
+function CountAll($table)
+{
+    $r = "select count(*) as nb from $table;";
+    $con = connexion();
+    if ($con) {
+        $res = mysqli_query($con, $r);
+        $nb = mysqli_fetch_assoc($res);
+    } else {
+        return null;
+    }
+    deconnexion($con);
+    return $nb['nb'];
+}

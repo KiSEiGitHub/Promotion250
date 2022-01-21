@@ -1,4 +1,10 @@
 <h3> Liste des interventions </h3>
+
+<form action = "" method="POST">
+    Nom de recherche : <input type="text" name="mot">
+    <input type="submit" name="btn-search" value="rechercher" class="btn-primary">
+</form>
+
 <table class = "table table-striped table-dark">
     <tr>
         <td>ID</td>
@@ -23,7 +29,7 @@
         echo "<a href='index.php?page=2&action=sup&idintervention=" . $intervention['idintervention'] . "'>";
         echo "<button class='btn-danger btn'>Supprimer</button>";
         echo "</a>";
-        echo "<a href='index.php?page=2&action=edit&idintervention='" . $intervention['idintervention'] . "'>";
+                echo "<a href='index.php?page=2&action=edit&idintervention=" . $intervention['idintervention'] . "'>";
         echo "<button class='btn-primary btn'>Edit</button>";
         echo "</a>";
         echo "</td>";
