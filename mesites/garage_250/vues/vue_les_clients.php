@@ -1,5 +1,5 @@
-<h3> Liste des clients </h3>
-<form action = "" method = "POST">
+<h3 style="margin: 50px 0 20px 0"> Liste des clients </h3>
+<form action = "" method = "POST" style="margin: 10px 0">
     Nom de recherche : <input type = "text" name = "mot">
     <input type = "submit" name = "btn-search" value = "rechercher" class = "btn-primary">
 </form>
