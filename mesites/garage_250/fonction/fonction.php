@@ -185,3 +185,17 @@ function CountAll($table)
     deconnexion($con);
     return $nb['nb'];
 }
+
+function selectVehiculelesClients($idclient)
+{
+    $r = "select * from vehicule where idclient = ".$idclient;
+    $con = connexion();
+
+    if($con){
+        $res = mysqli_query($con, $r);
+    } else {
+        return null;
+    }
+    deconnexion($con);
+    return $res;
+}

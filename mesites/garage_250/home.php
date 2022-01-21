@@ -6,7 +6,6 @@
     Notre garage est le top des garages dans la région. Venez nous voir, nous serons ravis de vous accueillir et vous
     rendre service
 </p>
-
 <?php
 
 $nbClients = CountAll("client");

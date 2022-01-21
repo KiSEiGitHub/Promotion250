@@ -1,7 +1,7 @@
 <h3 style = "font-size: 32px">Gestion client</h3>
 <?php
 $leClient = null;
-
+$lesVoiture = null;
 if (isset($_GET['action']) && isset($_GET['idclient'])) {
     if ($_GET['action'] == 'sup') {
         Delete('client', 'idclient', $_GET['idclient']);
@@ -9,6 +9,8 @@ if (isset($_GET['action']) && isset($_GET['idclient'])) {
     } else if ($_GET['action'] == 'edit') {
         $leClient = selectWhereClient($_GET['idclient']);
         // var_dump($leClient);
+    } else if ($_GET['action'] == 'voiture') {
+        $lesVoiture = selectVehiculelesClients($_GET['idclient']);
     }
 }
 
@@ -48,5 +50,11 @@ if (isset($_POST['btn-search'])) {
 }
 
 require_once 'vues/vue_les_clients.php';
+
+if ($lesVoiture != null) {
+    $p = $_GET['prenom'];
+    echo "<h2>Liste des voitures de $p</h2>";
+    require_once("vues/vue_les_vehicule_client.php");
+}
 
 ?>
