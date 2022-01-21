@@ -49,3 +49,20 @@ create table intervention
     foreign key (idvehicule) references vehicule (idvehicule),
     foreign key (idtechnicien) references technicien (idtechnicien)
 );
+
+create table user
+(
+    iduser int(3) not null auto_increment,
+    nom    varchar(30),
+    prenom varchar(30),
+    email  varchar(100),
+    mdp    varchar(255),
+    role   enum ("admin", "user"),
+    primary key (iduser)
+
+);
+
+insert into user
+values (null, "Julia", "Dan", "a@gmail.com", "123", "admin"),
+       (null, "Lucas", "Salim", "b@gmail.com",
+        "256", "user");
