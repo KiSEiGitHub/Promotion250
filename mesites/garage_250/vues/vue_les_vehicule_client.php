@@ -1,4 +1,4 @@
-<table class = "table table-dark table-striped">
+<table class="table table-dark table-striped">
     <tr>
         <td> Id Véhicule</td>
         <td> Matricule</td>
@@ -15,7 +15,6 @@
         echo "<td>" . $unVehicule['datecirculation'] . "</td>";
         echo "<td>" . $unVehicule['nbkm'] . "</td>";
         echo "<td>";
-
     }
     ?>
 

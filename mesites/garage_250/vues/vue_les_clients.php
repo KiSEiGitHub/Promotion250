@@ -1,9 +1,9 @@
 <h3 style="margin: 50px 0 20px 0"> Liste des clients </h3>
-<form action = "" method = "POST" style="margin: 10px 0">
-    Nom de recherche : <input type = "text" name = "mot">
-    <input type = "submit" name = "btn-search" value = "rechercher" class = "btn-primary">
+<form action="" method="POST" style="margin: 10px 0">
+    Nom de recherche : <input type="text" name="mot">
+    <input type="submit" name="btn-search" value="rechercher" class="btn-primary">
 </form>
-<table class = "table table-striped table-dark">
+<table class="table table-striped table-dark">
     <tr>
         <td>ID</td>
         <td>Nom</td>
@@ -30,8 +30,8 @@
         echo "<button class='btn-primary btn'>Edit</button>";
         echo "</a>";
         echo "</a>";
-        echo "<a href='index.php?page=1&action=voiture&idclient=".$unClient['idclient']."&prenom="
-            .$unClient['nom']."'>";
+        echo "<a href='index.php?page=1&action=voiture&idclient=" . $unClient['idclient'] . "&prenom="
+            . $unClient['nom'] . "'>";
         echo "<button class='btn-warning btn'>Voiture</button>";
         echo "</a>";
         echo "</td>";

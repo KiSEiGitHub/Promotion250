@@ -1,4 +1,4 @@
-<h3 style = "font-size: 32px">Gestion client</h3>
+<h3 style="font-size: 32px">Gestion client</h3>
 <?php
 $leClient = null;
 $lesVoiture = null;
@@ -17,8 +17,10 @@ if (isset($_GET['action']) && isset($_GET['idclient'])) {
 require_once 'vues/vue_insert_client.php';
 
 if (isset($_POST['btn'])) {
-    if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['adresse']) && !empty($_POST['mail']) &&
-        !empty($_POST['mdp']) && !empty($_POST['tel'])) {
+    if (
+        !empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['adresse']) && !empty($_POST['mail']) &&
+        !empty($_POST['mdp']) && !empty($_POST['tel'])
+    ) {
         Insert(
             "client",
             "nom",

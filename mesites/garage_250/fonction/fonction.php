@@ -21,11 +21,20 @@ function deconnexion($con)
 
 function Insert(
     $table_name,
-    $DB1, $DB2, $DB3, $DB4, $DB5, $DB6,
-    $VAL1, $VAL2, $VAL3, $VAL4, $VAL5, $VAL6,
+    $DB1,
+    $DB2,
+    $DB3,
+    $DB4,
+    $DB5,
+    $DB6,
+    $VAL1,
+    $VAL2,
+    $VAL3,
+    $VAL4,
+    $VAL5,
+    $VAL6,
     $length
-)
-{
+) {
     $con = connexion();
 
     if ($length == 6) {
@@ -51,7 +60,6 @@ function Delete($table, $id, $id2)
         mysqli_query($con, $r);
         mysqli_close($con);
     }
-
 }
 
 function Select($table)
@@ -60,7 +68,6 @@ function Select($table)
     $con = connexion();
     if ($con) {
         $lesClients = mysqli_query($con, $r);
-
     } else {
         return null;
     }
@@ -212,5 +219,4 @@ function AdminConnect($pseudo, $mdp)
             var_dump("OUI");
         }
     }
-
 }

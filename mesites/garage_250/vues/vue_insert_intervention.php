@@ -1,26 +1,24 @@
 <h4>Insertion intervention</h4>
-<form action = "" method = "post">
-    <div class = "input-block">
-        <label for = "description">
-            <textarea name = "description" rows = "3" cols = "30">
+<form action="" method="post">
+    <div class="input-block">
+        <label for="description">
+            <textarea name="description" rows="3" cols="30">
                 <?php
                 if ($lintervetion != null) echo $lintervetion['description']
                 ?>
             </textarea>
         </label>
-        <label for = "dateinter">
-            <input type = "text" name = "dateinter" placeholder = "dateinter" autocomplete = "off"
-                   value = "<?php if ($lintervetion != null) echo $lintervetion['dateinter']; ?>">
+        <label for="dateinter">
+            <input type="text" name="dateinter" placeholder="dateinter" autocomplete="off" value="<?php if ($lintervetion != null) echo $lintervetion['dateinter']; ?>">
         </label>
     </div>
-    <div class = "input-block">
-        <label for = "prix">
-            <input type = "text" name = "prix" placeholder = "prix" autocomplete = "off"
-                   value = "<?php if ($lintervetion != null) echo $lintervetion['prix']; ?>">
+    <div class="input-block">
+        <label for="prix">
+            <input type="text" name="prix" placeholder="prix" autocomplete="off" value="<?php if ($lintervetion != null) echo $lintervetion['prix']; ?>">
         </label>
-        <label for = "idvehicule">
-            <select name = "idvehicule">
-                <option value = ""></option>
+        <label for="idvehicule">
+            <select name="idvehicule">
+                <option value=""></option>
                 <?php
                 $voitures = Select('vehicule');
                 foreach ($voitures as $voiture) {
@@ -32,10 +30,10 @@
             </select>
         </label>
     </div>
-    <div class = "input-block">
-        <label for = "idtechnicien">
-            <select name = "idtechnicien">
-                <option value = ""></option>
+    <div class="input-block">
+        <label for="idtechnicien">
+            <select name="idtechnicien">
+                <option value=""></option>
                 <?php
                 $idtech = Select('technicien');
                 foreach ($idtech as $techtech) {
@@ -47,20 +45,18 @@
             </select>
         </label>
     </div>
-    <div class = "input-block">
-        <label for = "submut">
-            <input type = "submit" class = "btn-sbt"
-                <?php
-                if ($lintervetion != null) {
-                    echo 'name = "Modifier" value = "Modifier"';
-                } else {
-                    echo 'name = "btn" value = "Valider"';
-                }
-                ?>
-            >
+    <div class="input-block">
+        <label for="submut">
+            <input type="submit" class="btn-sbt" <?php
+                                                    if ($lintervetion != null) {
+                                                        echo 'name = "Modifier" value = "Modifier"';
+                                                    } else {
+                                                        echo 'name = "btn" value = "Valider"';
+                                                    }
+                                                    ?>>
         </label>
-        <label for = "reset">
-            <input type = "reset" class = "btn-sbt">
+        <label for="reset">
+            <input type="reset" class="btn-sbt">
         </label>
     </div>
 </form>

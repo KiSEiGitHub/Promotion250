@@ -1,4 +1,4 @@
-<h3 style = "font-size: 32px">Gestion interventions</h3>
+<h3 style="font-size: 32px">Gestion interventions</h3>
 <?php
 $lintervetion = null;
 
@@ -13,8 +13,10 @@ if (isset($_GET['action']) && isset($_GET['idintervention'])) {
 require_once 'vues/vue_insert_intervention.php';
 
 if (isset($_POST['btn'])) {
-    if (!empty($_POST['description']) && !empty($_POST['dateinter']) && !empty($_POST['prix']) && !empty($_POST['idvehicule']) &&
-        !empty($_POST['idtechnicien'])) {
+    if (
+        !empty($_POST['description']) && !empty($_POST['dateinter']) && !empty($_POST['prix']) && !empty($_POST['idvehicule']) &&
+        !empty($_POST['idtechnicien'])
+    ) {
         Insert(
             "intervention",
             "description",

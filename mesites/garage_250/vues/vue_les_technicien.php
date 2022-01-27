@@ -1,11 +1,11 @@
 <h3> Liste des techniciens </h3>
 
-<form action = "" method = "POST">
-    Nom de recherche : <input type = "text" name = "mot">
-    <input type = "submit" name = "btn-search" value = "rechercher" class = "btn-primary">
+<form action="" method="POST">
+    Nom de recherche : <input type="text" name="mot">
+    <input type="submit" name="btn-search" value="rechercher" class="btn-primary">
 </form>
 
-<table class = "table table-striped table-dark">
+<table class="table table-striped table-dark">
     <tr>
         <td>ID</td>
         <td>Nom</td>

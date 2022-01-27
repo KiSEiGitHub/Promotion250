@@ -1,4 +1,4 @@
-<h3 style = "font-size: 32px">Gestion véhicule</h3>
+<h3 style="font-size: 32px">Gestion véhicule</h3>
 <?php
 require_once 'vues/vue_insert_vehicule.php';
 
@@ -9,8 +9,10 @@ if (isset($_GET['action']) && isset($_GET['idvehicule'])) {
 }
 
 if (isset($_POST['btn'])) {
-    if (!empty($_POST['matricule']) && !empty($_POST['marque']) && !empty($_POST['datecirculation']) && !empty($_POST['nbkm']) &&
-        !empty($_POST['idclient'])) {
+    if (
+        !empty($_POST['matricule']) && !empty($_POST['marque']) && !empty($_POST['datecirculation']) && !empty($_POST['nbkm']) &&
+        !empty($_POST['idclient'])
+    ) {
         Insert(
             "vehicule",
             "matricule",
